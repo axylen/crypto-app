@@ -1,0 +1,13 @@
+.PricesContainer {
+  display: flex;
+
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 20px;
+
+  gap: 30px;
+}
+
+.PricesContainer__item {
+  min-width: 240px;
+}

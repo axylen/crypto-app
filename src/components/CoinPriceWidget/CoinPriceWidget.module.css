@@ -1,0 +1,28 @@
+.CoinPriceWidget {
+  font-weight: 500;
+
+  padding: 20px;
+
+  border-radius: 20px;
+  background-color: var(--color-background-light);
+}
+
+.CoinPriceWidget__header {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.CoinPriceWidget__coin {
+  font-size: 24px;
+  font-weight: 500;
+
+  margin: 0;
+
+  text-transform: uppercase;
+}
+
+.CoinPriceWidget__price {
+  margin-left: auto;
+}
