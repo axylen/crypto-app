@@ -1,0 +1,32 @@
+.Input {
+  position: relative;
+
+  display: flex;
+}
+
+.Input__field {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 20px;
+
+  text-align: right;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--color-background-dark);
+}
+
+.Input__field:focus {
+  border-color: var(--color-active);
+}
+
+.Input__label {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+
+  pointer-events: none;
+
+  color: var(--color-text-dark);
+}

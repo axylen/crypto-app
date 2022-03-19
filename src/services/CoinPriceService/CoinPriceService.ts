@@ -1,4 +1,5 @@
 import { makeAutoObservable, computed } from 'mobx';
+import { PriceRangeServiceInstance } from 'services/PriceRangeService';
 import { PriceServiceInstance } from 'services/PriceService';
 
 export class CoinPriceService {
@@ -16,6 +17,22 @@ export class CoinPriceService {
 
   get prevPrice() {
     return PriceServiceInstance.getPrevPrice(this.name);
+  }
+
+  get minRangeValue() {
+    return PriceRangeServiceInstance.getMinPrice(this.name) || '';
+  }
+
+  set maxRangeValue(value: string) {
+    PriceRangeServiceInstance.setMaxPrice(this.name, value);
+  }
+
+  get maxRangeValue() {
+    return PriceRangeServiceInstance.getMaxPrice(this.name) || '';
+  }
+
+  set minRangeValue(value: string) {
+    PriceRangeServiceInstance.setMinPrice(this.name, value);
   }
 
   destroy = () => {
