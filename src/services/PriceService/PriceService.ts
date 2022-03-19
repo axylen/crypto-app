@@ -1,9 +1,10 @@
 import { makeAutoObservable } from 'mobx';
+import { BASE_SABLECOIN } from 'app-constants';
 
-const getFullName = (coin: string, coin2 = 'usdt') => (coin + coin2).toLowerCase();
+const getFullName = (coin: string) => (coin + BASE_SABLECOIN).toLowerCase();
 
-const generateWebsocketUrl = (coin: string, coin2?: string) => {
-  const name = getFullName(coin, coin2);
+const generateWebsocketUrl = (coin: string) => {
+  const name = getFullName(coin);
   return `wss://stream.binance.com:9443/ws/${name}@trade`;
 };
 

@@ -1,5 +1,5 @@
-import { observer } from 'mobx-react-lite';
 import React, { useEffect, useMemo } from 'react';
+import { observer } from 'mobx-react-lite';
 import { CoinPriceService } from 'services/CoinPriceService';
 
 type Props = {

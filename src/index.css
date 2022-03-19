@@ -8,17 +8,23 @@ body {
   color: var(--color-text);
 }
 
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 :root {
-  --color-background-dark: #2a2d34;
-  --color-background-light: #343841;
+  --color-background-dark: #22252a;
+  --color-background-light: #2e3138;
 
-  --color-text: #e3e4e8;
-  --color-text-dark: #8e95a4;
-  --color-text-danger: #f7453b;
+  --color-text: #c7cad1;
+  --color-text-dark: #808798;
+  --color-text-danger: #dd453c;
+  --color-text-success: #22c34f;
 }
 
 *,
