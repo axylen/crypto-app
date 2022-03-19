@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { BASE_SABLECOIN } from 'app-constants';
+import { PriceServiceListeners, PriceServiceValues } from './PriceService.types';
 
 const getFullName = (coin: string) => (coin + BASE_SABLECOIN).toLowerCase();
 
@@ -9,9 +10,9 @@ const generateWebsocketUrl = (coin: string) => {
 };
 
 export class PriceServiceImpl {
-  listeners: any = {};
-  values: any = {};
-  prevPrice: any = {};
+  listeners: Record<string, PriceServiceListeners> = {};
+  values: PriceServiceValues = {};
+  prevPrice: PriceServiceValues = {};
 
   constructor() {
     makeAutoObservable(this);
@@ -37,7 +38,7 @@ export class PriceServiceImpl {
 
     if (--this.listeners[coin].subscribers) {
       this.listeners[coin].ws.close();
-      this.listeners[coin] = undefined;
+      delete this.listeners[coin];
     }
   };
 
