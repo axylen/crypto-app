@@ -1,0 +1,6 @@
+.Widget {
+  background: var(--color-background-light);
+  box-shadow: 0px 4px 40px #17171c;
+  border-radius: 15px;
+  padding: 10px;
+}

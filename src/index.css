@@ -41,6 +41,7 @@ code {
 :root {
   --color-active: #179bcf;
   --color-background-dark: #22232a;
+  --color-input-background: #24252D;
   --color-background-light: #2e2f38;
   --color-text: #c7c8d1;
   --color-text-danger: #dd453c;
