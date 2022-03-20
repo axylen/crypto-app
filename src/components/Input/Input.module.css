@@ -24,11 +24,11 @@
 }
 
 .Input__label {
+  font-size: 14px;
+
   position: absolute;
   top: 11px;
   right: 10px;
-
-  font-size: 14px;
 
   pointer-events: none;
 
@@ -36,6 +36,6 @@
 }
 
 .Input__label_right {
-  left: 10px;
   right: auto;
+  left: 10px;
 }

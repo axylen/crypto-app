@@ -24,16 +24,18 @@ export class CoinPriceService {
   }
 
   set maxRangeValue(value: string) {
-    PriceRangeServiceInstance.setMaxPrice(this.name, value);
+    this.setMaxRangeValue(value);
   }
+  setMaxRangeValue = (value: string) => PriceRangeServiceInstance.setMaxPrice(this.name, value);
 
   get maxRangeValue() {
     return PriceRangeServiceInstance.getMaxPrice(this.name) || '';
   }
 
   set minRangeValue(value: string) {
-    PriceRangeServiceInstance.setMinPrice(this.name, value);
+    this.setMinRangeValue(value);
   }
+  setMinRangeValue = (value: string) => PriceRangeServiceInstance.setMinPrice(this.name, value);
 
   destroy = () => {
     PriceServiceInstance.unsubscribe(this.name);

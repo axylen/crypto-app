@@ -1,6 +1,6 @@
-import React from "react";
-import { cx } from "utils";
-import css from "./Widget.module.css";
+import React from 'react';
+import { cx } from 'utils';
+import css from './Widget.module.css';
 
 type Props = {
   className?: string;

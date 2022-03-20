@@ -4,10 +4,10 @@
   flex-wrap: wrap;
 
   max-width: 1100px;
-  margin: 120px auto;
+  margin: 50px auto;
   padding: 20px;
 
-  gap: 30px;
+  gap: 20px;
 }
 
 .PricesContainer__item {

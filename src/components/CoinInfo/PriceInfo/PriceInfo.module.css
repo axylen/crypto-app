@@ -1,0 +1,30 @@
+.PriceInfo {
+  display: flex;
+  align-items: baseline;
+
+  gap: 10px;
+}
+
+.PriceInfo__price {
+  color: var(--color-text-dark);
+}
+
+.PriceInfo__share {
+  font-size: 14px;
+
+  margin-left: auto;
+
+  color: var(--color-text-dark);
+}
+
+.PriceInfo__shareSplit {
+  margin: 0 4px;
+}
+
+.PriceInfo__price_danger {
+  color: var(--color-text-danger);
+}
+
+.PriceInfo__price_warn {
+  color: var(--color-text-warn);
+}
