@@ -7,7 +7,7 @@ type Props = {
   className?: string;
 };
 
-const coins = ['eth', 'btc', 'matic'];
+const coins = ['matic', 'btc', 'eth'];
 
 export const PricesContainer: React.FC<Props> = (props) => {
   const { className } = props;

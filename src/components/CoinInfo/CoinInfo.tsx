@@ -49,7 +49,7 @@ export const CoinInfo: React.FC<Props> = observer((props) => {
           align="right"
         />
         <Input
-          label="min"
+          label="max"
           type="number"
           onChange={coinPriceService.setMaxRangeValue}
           value={coinPriceService.maxRangeValue}

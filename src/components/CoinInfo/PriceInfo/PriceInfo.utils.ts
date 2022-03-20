@@ -11,8 +11,8 @@ export const getRange = ({ value, min, max }: { value: number; min: string; max:
   const toMax = maxAsNum - value;
 
   return {
-    toMin: clampNum((toMin / range) * 100, 100),
-    toMax: clampNum((toMax / range) * 100, 100),
+    toMin: clampNum((toMax / range) * 100, 100),
+    toMax: clampNum((toMin / range) * 100, 100),
   };
 };
 
