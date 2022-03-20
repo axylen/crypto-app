@@ -1,0 +1,18 @@
+.DepositCalculator__table {
+  display: grid;
+  grid-template-columns: 54px 1fr 1fr;
+  gap: 6px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--color-background-dark);
+}
+
+.DepositCalculator__tableRow {
+  display: contents;
+}
+
+.DepositCalculator__result {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}

@@ -7,14 +7,16 @@
 .Input__field {
   width: 100%;
   min-width: 0;
-  padding: 9px 20px;
-
-  text-align: right;
+  padding: 9px 10px;
 
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 8px;
   outline: none;
   background-color: var(--color-background-dark);
+}
+
+.Input__field_right {
+  text-align: right;
 }
 
 .Input__field:focus {
@@ -23,10 +25,17 @@
 
 .Input__label {
   position: absolute;
-  top: 9px;
-  left: 10px;
+  top: 11px;
+  right: 10px;
+
+  font-size: 14px;
 
   pointer-events: none;
 
   color: var(--color-text-dark);
+}
+
+.Input__label_right {
+  left: 10px;
+  right: auto;
 }

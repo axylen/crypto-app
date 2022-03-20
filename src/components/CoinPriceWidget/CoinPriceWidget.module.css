@@ -1,62 +1,14 @@
 .CoinPriceWidget {
-  font-weight: 500;
-
-  padding: 20px;
-
-  border-radius: 20px;
-  background-color: var(--color-background-light);
-}
-
-.CoinPriceWidget__header {
-  display: block;
-
-  margin-bottom: 20px;
-}
-
-.CoinPriceWidget__coin {
-  font-size: 24px;
-  font-weight: 500;
-
-  margin: 0;
-  margin-bottom: 8px;
-
-  text-transform: uppercase;
-}
-
-.CoinPriceWidget__coin_stable {
-  font-size: 14px;
-
-  color: var(--color-text-dark);
-}
-.CoinPriceWidget__coin_stable::before {
-  content: ' / ';
-}
-
-.CoinPriceWidget__price {
-  margin-left: auto;
-
-  transition: color 0.3s ease-in-out;
-
-  color: var(--color-text-dark);
-}
-
-.CoinPriceWidget__price_danger {
-  color: var(--color-text-danger);
-}
-
-.CoinPriceWidget__price_warn {
-  color: var(--color-text-warn);
-}
-
-.CoinPriceWidget__priceRange {
   display: flex;
-  flex-direction: column;
-
-  gap: 10px;
 }
 
-.CoinPriceWidget__percents {
-  text-align: center;
+.CoinPriceWidget__coinInfo {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 2px solid var(--color-background-dark);
+}
 
-  color: var(--color-text-dark);
+.CoinPriceWidget__depositCalculator {
+  width: 306px;
 }

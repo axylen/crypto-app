@@ -1,8 +1,8 @@
 import { makeAutoObservable } from 'mobx';
-import { BASE_SABLECOIN } from 'app-constants';
+import { BASE_STABLECOIN } from 'app-constants';
 import { PriceServiceListeners, PriceServiceValues } from './PriceService.types';
 
-const getFullName = (coin: string) => (coin + BASE_SABLECOIN).toLowerCase();
+const getFullName = (coin: string) => (coin + BASE_STABLECOIN).toLowerCase();
 
 const generateWebsocketUrl = (coin: string) => {
   const name = getFullName(coin);

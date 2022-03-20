@@ -1,1 +1,1 @@
-export const BASE_SABLECOIN = 'usdt';
+export const BASE_STABLECOIN = 'usdt';
