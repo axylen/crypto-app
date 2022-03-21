@@ -6,6 +6,7 @@ import rightArrow from 'assets/RightArrow.svg';
 import { useCoinPriceService } from 'services/CoinPriceService';
 import { observer } from 'mobx-react-lite';
 import { calculateHowMuchCoinsNeed, formatCoinValue } from './DepositCalculator.utils';
+import { cx } from 'utils';
 
 type Props = {
   coin: string;
@@ -32,6 +33,10 @@ export const DepositCalculator: React.FC<Props> = observer((props) => {
 
   const isChanging1To2 = change1 > change2;
 
+  const handleCopy = (evt: React.MouseEvent) => {
+    navigator.clipboard.writeText(evt.currentTarget.textContent!);
+  };
+
   return (
     <div className={className}>
       <div className={css.DepositCalculator__table}>
@@ -53,19 +58,23 @@ export const DepositCalculator: React.FC<Props> = observer((props) => {
         </div>
       </div>
 
-      <div className={css.DepositCalculator__result}>
+      <div
+        className={cx(css.DepositCalculator__result, {
+          [css.DepositCalculator__result_reversed]: !isChanging1To2,
+        })}
+      >
         <div>
-          <span className={css.DepositCalculator__autoselect}>
+          <span className={css.DepositCalculator__autoselect} onClick={(e) => handleCopy}>
             {formatCoinValue(Math.abs(change1))}
           </span>{' '}
-          {isChanging1To2 ? coin : BASE_STABLECOIN}
+          {coin}
         </div>
         <img src={rightArrow} alt="to" />
         <div>
-          <span className={css.DepositCalculator__autoselect}>
+          <span className={css.DepositCalculator__autoselect} onClick={handleCopy}>
             {formatCoinValue(Math.abs(change2))}
           </span>{' '}
-          {isChanging1To2 ? BASE_STABLECOIN : coin}
+          {BASE_STABLECOIN}
         </div>
       </div>
     </div>

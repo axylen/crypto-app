@@ -22,6 +22,12 @@
   gap: 10px;
 }
 
+.DepositCalculator__result_reversed {
+  flex-flow: row-reverse;
+  justify-content: start;
+}
+
 .DepositCalculator__autoselect {
+  cursor: copy;
   user-select: all;
 }
