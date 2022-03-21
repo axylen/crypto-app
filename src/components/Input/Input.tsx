@@ -6,17 +6,27 @@ type Props = {
   value?: string;
   type?: string;
   label?: string;
-  onChange?: (value: string) => void;
+  name?: string;
+  onChange?: (value: string, name: string) => void;
   className?: string;
   align?: 'left' | 'right' | 'center';
   readonly?: boolean;
 };
 
 export const Input: React.FC<Props> = (props) => {
-  const { value, label, onChange, className, type = 'text', align = 'left', readonly } = props;
+  const {
+    value,
+    label,
+    onChange,
+    className,
+    name,
+    type = 'text',
+    align = 'left',
+    readonly,
+  } = props;
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    onChange?.(evt.target.value);
+    onChange?.(evt.target.value, evt.target.name);
   };
 
   return (
@@ -36,6 +46,7 @@ export const Input: React.FC<Props> = (props) => {
           [css.Input__field_right]: align === 'right',
           [css.Input__field_center]: align === 'center',
         })}
+        name={name}
         type={type}
         onChange={handleChange}
         value={value}

@@ -26,7 +26,3 @@ export const calculateHowMuchCoinsNeed = ({
 
   return [need1, need2];
 };
-
-export const formatCoinValue = (val: number, maxFractionDigit = 6) => {
-  return String(parseFloat(val.toFixed(maxFractionDigit)));
-};

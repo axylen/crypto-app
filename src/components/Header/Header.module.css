@@ -1,0 +1,25 @@
+.Header {
+  position: sticky;
+  top: 0;
+
+  background: var(--color-background-light);
+  box-shadow: 0 4px 40px var(--color-shadow);
+}
+
+.Header__wrap {
+  display: flex;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Header__link {
+  padding: 12px 30px;
+
+  border-bottom: 2px solid transparent;
+}
+
+.Header__link_active {
+  border-color: var(--color-text-dark);
+}

@@ -5,8 +5,8 @@ import css from './DepositCalculator.module.css';
 import rightArrow from 'assets/RightArrow.svg';
 import { useCoinPriceService } from 'services/CoinPriceService';
 import { observer } from 'mobx-react-lite';
-import { calculateHowMuchCoinsNeed, formatCoinValue } from './DepositCalculator.utils';
-import { cx } from 'utils';
+import { calculateHowMuchCoinsNeed } from './DepositCalculator.utils';
+import { cx, roundNumber } from 'utils';
 
 type Props = {
   coin: string;
@@ -53,8 +53,8 @@ export const DepositCalculator: React.FC<Props> = observer((props) => {
 
         <div className={css.DepositCalculator__tableRow}>
           <span>Need</span>
-          <Input label={coin} readonly value={formatCoinValue(need1)}></Input>
-          <Input label={BASE_STABLECOIN} readonly value={formatCoinValue(need2)}></Input>
+          <Input label={coin} readonly value={roundNumber(need1)}></Input>
+          <Input label={BASE_STABLECOIN} readonly value={roundNumber(need2)}></Input>
         </div>
       </div>
 
@@ -64,15 +64,15 @@ export const DepositCalculator: React.FC<Props> = observer((props) => {
         })}
       >
         <div>
-          <span className={css.DepositCalculator__autoselect} onClick={(e) => handleCopy}>
-            {formatCoinValue(Math.abs(change1))}
+          <span className={css.DepositCalculator__autoselect} onClick={handleCopy}>
+            {roundNumber(Math.abs(change1))}
           </span>{' '}
           {coin}
         </div>
         <img src={rightArrow} alt="to" />
         <div>
           <span className={css.DepositCalculator__autoselect} onClick={handleCopy}>
-            {formatCoinValue(Math.abs(change2))}
+            {roundNumber(Math.abs(change2))}
           </span>{' '}
           {BASE_STABLECOIN}
         </div>

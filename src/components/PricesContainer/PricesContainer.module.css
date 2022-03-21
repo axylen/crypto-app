@@ -1,16 +1,13 @@
 .PricesContainer {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 20px;
+  justify-content: center;
 
   gap: 20px;
 }
 
 .PricesContainer__item {
   display: flex;
+
   gap: 20px;
 }
