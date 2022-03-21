@@ -1,0 +1,36 @@
+.PoolComissionComparator__table {
+  display: grid;
+  grid-template-columns: 73px repeat(3, 1fr);
+  align-items: center;
+  gap: 6px;
+}
+
+.PoolComissionComparator__tableRow,
+.PoolComissionComparator__smallRow {
+  display: contents;
+}
+
+.PoolComissionComparator__smallRow div {
+  justify-self: center;
+}
+
+.PoolComissionComparator__smallRow:first-of-type div {
+  margin-bottom: 4px;
+}
+
+.PoolComissionComparator__smallRow:last-of-type div {
+  margin-top: 9px;
+}
+
+.PoolComissionComparator__smallRow div:first-child {
+  grid-column-start: 2;
+}
+
+.PoolComissionComparator__text {
+  text-align: right;
+  padding-right: 14px;
+}
+
+.PoolComissionComparator__bestVal {
+  color: var(--color-text-success);
+}

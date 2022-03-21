@@ -26,7 +26,6 @@
 .CoinInfo__priceRange {
   display: flex;
   flex-direction: column;
-  font-weight: 500;
 
   gap: 6px;
 }

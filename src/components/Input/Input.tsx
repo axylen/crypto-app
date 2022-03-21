@@ -8,7 +8,7 @@ type Props = {
   label?: string;
   onChange?: (value: string) => void;
   className?: string;
-  align?: 'left' | 'right';
+  align?: 'left' | 'right' | 'center';
   readonly?: boolean;
 };
 
@@ -22,12 +22,20 @@ export const Input: React.FC<Props> = (props) => {
   return (
     <span className={css.Input}>
       {label && (
-        <div className={cx(css.Input__label, { [css.Input__label_right]: align === 'right' })}>
+        <div
+          className={cx(css.Input__label, {
+            [css.Input__label_right]: align === 'right',
+            [css.Input__field_center]: align === 'center',
+          })}
+        >
           {label}
         </div>
       )}
       <input
-        className={cx(className, css.Input__field, { [css.Input__field_right]: align === 'right' })}
+        className={cx(className, css.Input__field, {
+          [css.Input__field_right]: align === 'right',
+          [css.Input__field_center]: align === 'center',
+        })}
         type={type}
         onChange={handleChange}
         value={value}

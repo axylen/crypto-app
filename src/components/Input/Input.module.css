@@ -13,10 +13,16 @@
   border-radius: 8px;
   outline: none;
   background-color: var(--color-background-dark);
+
+  font-weight: 500;
 }
 
 .Input__field_right {
   text-align: right;
+}
+
+.Input__field_center {
+  text-align: center;
 }
 
 .Input__field:focus {
