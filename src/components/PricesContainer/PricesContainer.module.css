@@ -1,7 +1,6 @@
 .PricesContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   gap: 20px;
 }
@@ -10,4 +9,8 @@
   display: flex;
 
   gap: 20px;
+}
+
+.PricesContainer__comparator {
+  max-width: 320px;
 }
