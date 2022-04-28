@@ -13,6 +13,14 @@ export const Header = () => {
           }
           to="/"
         >
+          Index
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            cx(css.Header__link, { [css.Header__link_active]: isActive })
+          }
+          to="/pools"
+        >
           Prices
         </NavLink>
         <NavLink
